@@ -14,14 +14,14 @@ function chicagoist_standard_images_field_default_field_instances() {
   $field_instances['node-landscape_image-field_landscape_image'] = array(
     'bundle' => 'landscape_image',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Click upload after selecting your image to crop it yourself, otherwise it will auto-crop towards the center of the image.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'landscape',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -49,7 +49,7 @@ function chicagoist_standard_images_field_default_field_instances() {
             'pathauto' => 0,
             'transliterate' => 1,
           ),
-          'value' => '[current-date:custom:Y] [current-date:custom:n] [node:title]',
+          'value' => '[current-date:custom:Y] [current-date:custom:n] [node:title].[file:extension]',
         ),
         'file_path' => array(
           'options' => array(
@@ -62,7 +62,7 @@ function chicagoist_standard_images_field_default_field_instances() {
       ),
       'filefield_paths_enabled' => 1,
       'max_filesize' => '',
-      'max_resolution' => '',
+      'max_resolution' => '2000x2000',
       'min_resolution' => '640x480',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -88,14 +88,14 @@ function chicagoist_standard_images_field_default_field_instances() {
   $field_instances['node-portrait_image-field_portrait_image'] = array(
     'bundle' => 'portrait_image',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Click upload after selecting your image to crop it yourself, otherwise it will auto-crop towards the center of the image.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'portrait',
         ),
         'type' => 'image',
         'weight' => 0,
@@ -123,7 +123,7 @@ function chicagoist_standard_images_field_default_field_instances() {
             'pathauto' => 0,
             'transliterate' => 1,
           ),
-          'value' => '[current-date:custom:Y] [current-date:custom:n] [node:title]',
+          'value' => '[current-date:custom:Y] [current-date:custom:n] [node:title].[file:extension]',
         ),
         'file_path' => array(
           'options' => array(
@@ -136,7 +136,7 @@ function chicagoist_standard_images_field_default_field_instances() {
       ),
       'filefield_paths_enabled' => 1,
       'max_filesize' => '',
-      'max_resolution' => '',
+      'max_resolution' => '2000x2000',
       'min_resolution' => '365x548',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -160,6 +160,7 @@ function chicagoist_standard_images_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Click upload after selecting your image to crop it yourself, otherwise it will auto-crop towards the center of the image.');
   t('Landscape Image');
   t('Portrait Image');
 
