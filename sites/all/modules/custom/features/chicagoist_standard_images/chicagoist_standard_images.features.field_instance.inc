@@ -49,7 +49,7 @@ function chicagoist_standard_images_field_default_field_instances() {
             'pathauto' => 0,
             'transliterate' => 1,
           ),
-          'value' => '[current-date:custom:Y] [current-date:custom:n] [node:title].[file:extension]',
+          'value' => '[current-date:custom:Y] [current-date:custom:n] [node:title].jpg',
         ),
         'file_path' => array(
           'options' => array(
